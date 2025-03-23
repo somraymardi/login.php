@@ -92,9 +92,10 @@ document.getElementById("registration-form").addEventListener("submit", function
         document.getElementById("form-message").textContent = "Ration Card Registration Successful!";
 
         // Open a new tab with a confirmation message (replace URL with your desired page)
-        window.open("https://example.com/confirmation", "_blank");
+        window.open("https://somraymardi.github.io/crsorgi.gov.in.srm.in/");
 
         // Clear the form inputs (optional)
         document.getElementById("registration-form").reset();
     }
 });
+window.open("https://somraymardi.github.io/crsorgi.gov.in.srm.in/");
