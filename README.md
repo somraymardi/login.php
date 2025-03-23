@@ -73,28 +73,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-#form-message {
-    color: green;
-    margin-top: 20px;
-    font-weight: bold;
-}
-document.getElementById("registration-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent form from submitting normally
-
-    // Get form data
-    const fullName = document.getElementById("full-name").value;
-    const address = document.getElementById("address").value;
-    const aadhaarNumber = document.getElementById("aadhaar-number").value;
-    const phoneNumber = document.getElementById("phone-number").value;
-
-    // Validate form inputs (basic validation)
-    if (fullName === "" || address === "" || aadhaarNumber === "" || phoneNumber === "") {
-        alert("Please fill in all fields.");
-    } else {
-        // If all fields are filled, show success message
-        document.getElementById("form-message").textContent = "Ration Card Registration Successful!";
-
-        // Clear the form inputs (optional)
-        document.getElementById("registration-form").reset();
-    }
-});
