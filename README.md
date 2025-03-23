@@ -66,9 +66,14 @@
             </div>
         </form>
         
-        <!-- Success message will appear here -->
+        <!-- Success message will appear here --> 
         <p id="form-message"></p>
     </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <
 
     <script src="script.js"></script>
 </body>
