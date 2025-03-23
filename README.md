@@ -65,6 +65,8 @@
                 <button type="submit" id="submit-btn">Submit</button>
             </div>
         </form>
+        
+        <!-- Success message will appear here -->
         <p id="form-message"></p>
     </div>
 
