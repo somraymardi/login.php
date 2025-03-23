@@ -27,7 +27,7 @@
                 <button type="submit" id="submit-btn">Register</button>
             </div>
         </form>
-        <p id="form-message"></p>
+        <p id="Form submitted successfully"></p>
     </div>
 
     <script src="script.js"></script>
