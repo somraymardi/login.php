@@ -33,63 +33,41 @@
     <script src="script.js"></script>
 </body>
 </html>
-/* General Styling */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ration Card Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Ration Card Registration Form</h2>
+        <form id="registration-form">
+            <div class="input-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="full-name" required placeholder="Enter your full name">
+            </div>
+            <div class="input-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" required placeholder="Enter your address">
+            </div>
+            <div class="input-group">
+                <label for="aadhaar-number">Aadhaar Number</label>
+                <input type="text" id="aadhaar-number" name="aadhaar-number" required placeholder="Enter your Aadhaar number">
+            </div>
+            <div class="input-group">
+                <label for="phone-number">Phone Number</label>
+                <input type="text" id="phone-number" name="phone-number" required placeholder="Enter your phone number">
+            </div>
+            <div class="input-group">
+                <button type="submit" id="submit-btn">Submit</button>
+            </div>
+        </form>
+        <p id="form-message"></p>
+    </div>
 
-.container {
-    background-color: #fff;
-    padding: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
-}
-
-h2 {
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.input-group {
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-input[type="text"], input[type="email"], input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-}
-
-button {
-    width: 100%;
-    padding: 12px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-#form-message {
-    color: green;
-    margin-top: 20px;
-}
+    <script src="script.js"></script>
+</body>
+</html>
