@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login and Registration App</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
     <style>
         body {
             background-color: #f2f2f2;
@@ -25,7 +26,7 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div id="login-container" class="container">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
                 <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab" aria-controls="login" aria-selected="true">Login</button>
@@ -87,9 +88,15 @@
             </div>
         </div>
     </div>
+    <div id="home-container" style="display: none;" class="container">
+        <h2>Welcome, <span id="username-display"></span>!</h2>
+        <p>You are now logged in.</p>
+        <button class="btn btn-primary" onclick="logoutUser()">Logout</button>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script>
         var users = JSON.parse(localStorage.getItem("users")) || [];
 
@@ -130,10 +137,9 @@
             if (username && password) {
                 var user = users.find(user => user.username === username && user.password === password);
                 if (user) {
-                    document.getElementById("message").innerHTML = "Login successful!";
-                    $('#messageModal').modal('show');
-                    document.getElementById("username").value = "";
-                    document.getElementById("password").value = "";
+                    document.getElementById("username-display").innerHTML = username;
+                    document.getElementById("login-container").style.display = "none";
+                    document.getElementById("home-container").style.display = "block";
                 } else {
                     document.getElementById("message").innerHTML = "Invalid username or password!";
                     $('#messageModal').modal('show');
@@ -143,7 +149,11 @@
                 $('#messageModal').modal('show');
             }
         }
+
+        function logoutUser() {
+            document.getElementById("login-container").style.display = "block";
+            document.getElementById("home-container").style.display = "none";
+        }
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
